@@ -1,8 +1,18 @@
 # doctorilana.com — site guide for Claude sessions
 
-Static HTML site for Dr. Ilana Gurevich, ND, LAc, FABNG — board-certified naturopathic
-gastroenterologist in Portland, OR. No build step, no framework: edit the HTML/CSS
-directly and push to `main`; the host deploys automatically.
+Static HTML site for Dr. Ilana Gurevich, ND, LAc, FABNG — naturopathic physician
+specializing in gastrointestinal disorders, Portland, OR. No build step, no framework:
+edit the HTML/CSS directly and push to `main`; the host deploys automatically.
+
+## ⚠️ Title compliance — non-negotiable
+
+NEVER describe Ilana as a "gastroenterologist" (including "naturopathic
+gastroenterologist" or "gastroenterology specialist") — she cannot legally use
+that title. Approved: "naturopathic physician specializing in gastrointestinal
+disorders" and shortenings that avoid the banned noun. Field terms and proper
+nouns are fine: "naturopathic gastroenterology" (the discipline), FABNG,
+"Gastroenterology Association of Naturopathic Physicians". Calling her MD
+colleagues "your gastroenterologist" is fine — they hold that title.
 
 The owner is non-technical. When she asks for a change, make it, verify the affected
 page still renders sensibly, commit with a plain-English message, and push. Don't
