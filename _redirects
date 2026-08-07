@@ -1,0 +1,11 @@
+# Old Wix-era paths (site lived here ~Jun-Aug 2026) -> closest new pages
+/about            /about.html            301
+/about-1          /about.html            301
+/services         /patients.html         301
+/scheduling       /patients.html#book    301
+/medicinary       /patients.html         301
+/blog             /podcasts.html         301
+/blog/*           /podcasts.html         301
+/online-classes   /providers.html        301
+/contact-1        /contact.html          301
+/podcast          /podcasts.html         301
