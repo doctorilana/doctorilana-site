@@ -18,6 +18,11 @@ The owner is non-technical. When she asks for a change, make it, verify the affe
 page still renders sensibly, commit with a plain-English message, and push. Don't
 introduce build tools, frameworks, or dependencies.
 
+## Companion docs
+
+- `OWNERS-GUIDE.md` — human-facing guide for Ilana (plain English)
+- `SETUP-NEW-COMPUTER.md` — runbook for Claude to set up a new editing machine
+
 ## Structure
 
 - `index.html` — homepage: hero ("The gut can heal."), three audience doors
