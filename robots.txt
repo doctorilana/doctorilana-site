@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://doctorilana.com/sitemap.xml

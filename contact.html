@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Doctor Ilana | Patients, Providers & Consulting</title>
+<meta name="description" content="Contact Dr. Ilana Gurevich — book a visit through Open Wellness PDX in Portland, or reach out for provider education, consulting, and media inquiries.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact — Doctor Ilana | Patients, Providers &amp; Consulting">
+<meta property="og:description" content="Contact Dr. Ilana Gurevich — book a visit through Open Wellness PDX in Portland, or reach out for provider education, consulting, and media inquiries.">
+<meta property="og:image" content="assets/logo-full.jpg">
+<link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+.contact-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:start;}
+.cform label{display:block;font-size:12px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-deep);margin:22px 0 8px;}
+.cform input,.cform select,.cform textarea{width:100%;padding:13px 16px;font-family:var(--sans);font-size:15px;font-weight:300;color:var(--ink);background:var(--white);border:1px solid rgba(11,46,60,0.18);border-radius:var(--radius);}
+.cform textarea{min-height:140px;resize:vertical;}
+.cform input:focus,.cform select:focus,.cform textarea:focus{outline:2px solid var(--gold);outline-offset:1px;}
+.info-card{background:var(--teal-900);border-radius:var(--radius);padding:40px 36px;}
+.info-card h3{color:var(--cream);font-size:22px;margin-bottom:6px;}
+.info-card p,.info-card a{color:var(--teal-100);font-size:15px;text-decoration:none;}
+.info-card a:hover{color:var(--gold);}
+.info-card .eyebrow{margin-top:26px;margin-bottom:6px;}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/logo-mark.svg" alt="">
+      <span class="brand-name">doctor ilana<span class="brand-sub">Naturopathic Gastro</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav">
+      <a href="patients.html">Patients</a>
+      <a href="providers.html">Providers</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="podcasts.html">Podcasts</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="about.html">About</a>
+      <a class="btn btn-gold btn-small" href="patients.html#book">Book a Visit</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero on-dark">
+  <div class="eyebrow">Contact</div>
+  <h1>Get in touch</h1>
+  <p>Choose the path that fits — patient scheduling goes through the clinic; education, consulting, and media inquiries come straight to me.</p>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <!-- NOTE: form currently opens a pre-filled email. Swap action to Formspree/HubSpot endpoint when ready. -->
+        <form class="cform" id="contactForm">
+          <label for="cf-type">I am a…</label>
+          <select id="cf-type">
+            <option value="patient">Patient / prospective patient</option>
+            <option value="provider">Healthcare provider seeking education or mentorship</option>
+            <option value="company">Company interested in consulting</option>
+            <option value="media">Podcast / media / speaking inquiry</option>
+          </select>
+          <label for="cf-name">Name</label>
+          <input id="cf-name" type="text" autocomplete="name">
+          <label for="cf-msg">Message</label>
+          <textarea id="cf-msg" placeholder="A sentence or two about what you're looking for…"></textarea>
+          <div style="margin-top:26px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;">
+            <button class="btn btn-gold" type="submit">Compose Email</button>
+            <span style="font-size:13px;color:var(--ink-soft);">Opens your email app with everything pre-filled.</span>
+          </div>
+          <p id="patientNote" style="display:none;margin-top:18px;font-size:14px;color:var(--ink-soft);background:var(--cream-dim);border-left:3px solid var(--gold);padding:14px 18px;border-radius:var(--radius);">For appointments, the fastest path is booking directly with <a class="text-link" style="border-bottom-width:1px;" href="https://www.openwellnesspdx.com/" target="_blank" rel="noopener">Open Wellness PDX</a> or calling <a href="tel:+15037700670">503-770-0670</a>.</p>
+        </form>
+      </div>
+      <div class="info-card on-dark">
+        <h3>Open Wellness PDX</h3>
+        <p>1901 N Killingsworth St<br>Portland, OR 97217</p>
+        <div class="eyebrow">Phone</div>
+        <p><a href="tel:+15037700670">503-770-0670</a></p>
+        <div class="eyebrow">Hours</div>
+        <p>Mon–Fri 8–6 · Sat 9–6 · Sun closed</p>
+        <div class="eyebrow">Visits</div>
+        <p>In person in Portland and by telehealth. Insurance benefits verified as a courtesy.</p>
+        <div class="eyebrow">Education &amp; Consulting</div>
+        <p><a href="mailto:info@openwellnesspdx.com">info@openwellnesspdx.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+const routing = {
+  patient:  {to:'info@openwellnesspdx.com', sub:'Patient inquiry'},
+  provider: {to:'info@openwellnesspdx.com', sub:'Provider education / mentorship inquiry'},
+  company:  {to:'info@openwellnesspdx.com', sub:'Consulting inquiry'},
+  media:    {to:'info@openwellnesspdx.com', sub:'Media / speaking inquiry'}
+};
+const typeSel = document.getElementById('cf-type');
+const note = document.getElementById('patientNote');
+function syncNote(){ note.style.display = typeSel.value === 'patient' ? 'block' : 'none'; }
+typeSel.addEventListener('change', syncNote); syncNote();
+document.getElementById('contactForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const r = routing[typeSel.value];
+  const name = document.getElementById('cf-name').value.trim();
+  const msg = document.getElementById('cf-msg').value.trim();
+  location.href = `mailto:${r.to}?subject=${encodeURIComponent(r.sub + (name ? ' — ' + name : ''))}&body=${encodeURIComponent(msg)}`;
+});
+</script>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo-mark.svg" alt="">
+          <span>doctor ilana</span>
+        </div>
+        <p>Ilana Gurevich, ND, LAc, FABNG<br>Board-certified naturopathic gastroenterologist<br>Portland, Oregon</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="patients.html">For Patients</a></li>
+          <li><a href="providers.html">For Providers</a></li>
+          <li><a href="consulting.html">For Companies</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="press.html">Press Kit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Listen</h4>
+        <ul>
+          <li><a href="https://www.turdnerdspod.com/" target="_blank" rel="noopener">The Turd Nerds</a></li>
+          <li><a href="https://podcasts.apple.com/us/podcast/the-point-of-medicine/id1769930721" target="_blank" rel="noopener">The Point of Medicine</a></li>
+          <li><a href="podcasts.html#interviews">Guest Interviews</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Clinic</h4>
+        <ul>
+          <li><a href="https://www.openwellnesspdx.com/" target="_blank" rel="noopener">Open Wellness PDX</a></li>
+          <li>1901 N Killingsworth St<br>Portland, OR 97217</li>
+          <li><a href="tel:+15037700670">503-770-0670</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-note">
+      <span>© 2026 Dr. Ilana Gurevich. All rights reserved.</span>
+      <span>This website does not provide medical advice. Information is for educational purposes only.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

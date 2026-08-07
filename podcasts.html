@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Podcasts & Media — Doctor Ilana | The Turd Nerds, The Point of Medicine & Guest Interviews</title>
+<meta name="description" content="Listen to Dr. Ilana Gurevich on her podcasts — The Turd Nerds and The Point of Medicine — and in guest expert interviews on IBD, SIBO, biofilms, and gut health across the integrative medicine world.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Podcasts & Media — Doctor Ilana | The Turd Nerds, The Point of Medicine & Guest Interviews">
+<meta property="og:description" content="Listen to Dr. Ilana Gurevich on her podcasts — The Turd Nerds and The Point of Medicine — and in guest expert interviews on IBD, SIBO, biofilms, and gut health across the integrative medicine world.">
+<meta property="og:image" content="assets/logo-full.jpg">
+<link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  .show {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .show + .show { margin-top: 72px; padding-top: 72px; border-top: 1px solid rgba(11,46,60,0.1); }
+  .show-art {
+    width: 260px; height: 260px;
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    box-shadow: var(--shadow);
+  }
+  .show-art .art-title { font-family: var(--serif); font-size: 34px; line-height: 1.1; }
+  .show-art .art-sub { font-size: 10.5px; letter-spacing: 0.28em; text-transform: uppercase; margin-top: 12px; font-weight: 500; }
+  .art-turd { background: var(--gold); color: var(--teal-950); }
+  .art-turd .art-sub { color: var(--teal-800); }
+  .art-point { background: var(--teal-900); color: var(--cream); border: 1px solid rgba(227,184,115,0.4); }
+  .art-point .art-sub { color: var(--gold); }
+  .show h2 { font-size: clamp(28px, 3.6vw, 38px); }
+  .show .hosts { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-deep); margin-top: 8px; }
+  .show p.desc { margin-top: 16px; color: var(--ink-soft); }
+  .topics { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
+  .topics li {
+    font-size: 12.5px;
+    letter-spacing: 0.06em;
+    color: var(--teal-800);
+    background: var(--cream-dim);
+    border: 1px solid rgba(11,46,60,0.08);
+    border-radius: 999px;
+    padding: 6px 14px;
+  }
+  .listen-links { margin-top: 26px; display: flex; gap: 14px; flex-wrap: wrap; }
+
+  .interview-list { list-style: none; max-width: 860px; margin: 0 auto; }
+  .interview-list li { border-bottom: 1px solid rgba(11,46,60,0.1); }
+  .interview-list a {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: baseline;
+    padding: 20px 6px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .interview-list a:hover { background: rgba(227,184,115,0.1); }
+  .interview-list .ep-title { font-family: var(--serif); font-size: 21px; color: var(--teal-900); }
+  .interview-list .ep-show { font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-deep); white-space: nowrap; }
+  @media (max-width: 900px) {
+    .show { grid-template-columns: 1fr; }
+    .show-art { width: 200px; height: 200px; }
+    .interview-list a { grid-template-columns: 1fr; gap: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/logo-mark.svg" alt="">
+      <span class="brand-name">doctor ilana<span class="brand-sub">Naturopathic Gastro</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav">
+      <a href="patients.html">Patients</a>
+      <a href="providers.html">Providers</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="podcasts.html">Podcasts</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="about.html">About</a>
+      <a class="btn btn-gold btn-small" href="patients.html#book">Book a Visit</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero on-dark">
+  <div class="eyebrow">Podcasts</div>
+  <h1>Talking about guts, everywhere</h1>
+  <p>Two shows of my own, and years of guest appearances as a GI expert across the integrative medicine world.</p>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="show">
+      <div class="show-art art-turd">
+        <div class="art-title">The Turd Nerds</div>
+        <div class="art-sub">Functional Gastroenterology</div>
+      </div>
+      <div>
+        <div class="eyebrow">Co-host</div>
+        <h2>The Turd Nerds</h2>
+        <div class="hosts">with Dr. Rebecca Sand, ND, LAc &amp; Dr. Ami Kapadia, MD</div>
+        <p class="desc">Flushing out the facts on your gut health. Three GI-obsessed physicians — two NDs and an MD — talk real cases, emerging research, and what actually works in functional gastroenterology. Nearly 100 episodes and counting, with CEU credits available for practitioners.</p>
+        <ul class="topics">
+          <li>SIBO</li><li>IBD</li><li>Biofilms</li><li>Gut–brain axis</li><li>Microbiome</li><li>Gallbladder &amp; bile</li><li>Mold &amp; mast cells</li><li>FMT</li>
+        </ul>
+        <div class="listen-links">
+          <a class="btn btn-gold btn-small" href="https://podcasts.apple.com/us/podcast/the-turd-nerds/id1651253399" target="_blank" rel="noopener">Apple Podcasts</a>
+          <a class="btn btn-outline btn-small" href="https://open.spotify.com/show/7ioxK8K1S85xSPzdiaUpt5" target="_blank" rel="noopener">Spotify</a>
+          <a class="btn btn-outline btn-small" href="https://www.youtube.com/playlist?list=PLjT9-_5WNXUffo-taultvfWnC27NoRSTE" target="_blank" rel="noopener">YouTube</a>
+          <a class="btn btn-outline btn-small" href="https://www.turdnerdspod.com/" target="_blank" rel="noopener">turdnerdspod.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="show">
+      <div class="show-art art-point">
+        <div class="art-title">The Point of Medicine</div>
+        <div class="art-sub">Neural Therapy &amp; Beyond</div>
+      </div>
+      <div>
+        <div class="eyebrow">Co-host</div>
+        <h2>The Point of Medicine</h2>
+        <div class="hosts">with Dr. Anne Hill, ND</div>
+        <p class="desc">Conversations with clinicians about the autonomic nervous system, fascia, and neural therapy — the overlooked terrain where chronic illness begins and healing starts. Biweekly interviews for practitioners and curious patients alike.</p>
+        <ul class="topics">
+          <li>Neural therapy</li><li>Autonomic nervous system</li><li>Fascia</li><li>Chronic illness</li><li>Regulation &amp; healing</li>
+        </ul>
+        <div class="listen-links">
+          <a class="btn btn-gold btn-small" href="https://podcasts.apple.com/us/podcast/the-point-of-medicine/id1769930721" target="_blank" rel="noopener">Apple Podcasts</a>
+          <a class="btn btn-outline btn-small" href="https://music.amazon.com/podcasts/43d36384-d127-4aa2-b61f-f701ffa936cd/the-point-of-medicine" target="_blank" rel="noopener">Amazon Music</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dim">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">Fresh from the Feed</div><h2>Latest episodes</h2></div>
+    <div class="grid grid-2" style="align-items:start;">
+      <div>
+        <h3 style="font-size:22px;margin-bottom:10px;">The Turd Nerds</h3>
+        <ul class="interview-list" style="max-width:none;">
+        <li><a href="https://podcasters.spotify.com/pod/show/theturdnerds/episodes/88---The-Gallbladder-Recovery-Toolkit-e3kvd12" target="_blank" rel="noopener"><span class="ep-title" style="font-size:17px;">#88 — The Gallbladder Recovery Toolkit</span><span class="ep-show">Jul 2026</span></a></li>
+        <li><a href="https://podcasters.spotify.com/pod/show/theturdnerds/episodes/87--The-Hormone-Organ-Nobody-Talks-About-e3kvckr" target="_blank" rel="noopener"><span class="ep-title" style="font-size:17px;">#87 — The Hormone Organ Nobody Talks About</span><span class="ep-show">Jul 2026</span></a></li>
+        <li><a href="https://podcasters.spotify.com/pod/show/theturdnerds/episodes/86--Gallbladder-Chaos-Hormones--Microbes--Bile-e3kvbu6" target="_blank" rel="noopener"><span class="ep-title" style="font-size:17px;">#86 — Gallbladder Chaos: Hormones, Microbes & Bile</span><span class="ep-show">Jun 2026</span></a></li>
+        <li><a href="https://podcasters.spotify.com/pod/show/theturdnerds/episodes/85--Lyme-and-Co-Infections-A-Hidden-Driver-of-Gut-and-Chronic-Symptoms-with-Dr--Crane-Holmes-e3h6ala" target="_blank" rel="noopener"><span class="ep-title" style="font-size:17px;">#85 — Lyme & Co-Infections with Dr. Crane Holmes</span><span class="ep-show">Jun 2026</span></a></li>
+        <li><a href="https://podcasters.spotify.com/pod/show/theturdnerds/episodes/84--When-Its-Not-SIBO-Mold--Mast-Cells--and-Chronic-Gut-Symptoms-with-Dr--Crane-Holmes-e3h660b" target="_blank" rel="noopener"><span class="ep-title" style="font-size:17px;">#84 — When It's Not SIBO: Mold, Mast Cells & Chronic Gut Symptoms</span><span class="ep-show">Jun 2026</span></a></li>
+        <li><a href="https://podcasters.spotify.com/pod/show/theturdnerds/episodes/83--The-Vagus-Nerve-Explained-GutBrain-Connection--IBS--and-What-Actually-Helps-e3h559p" target="_blank" rel="noopener"><span class="ep-title" style="font-size:17px;">#83 — The Vagus Nerve Explained: Gut-Brain, IBS & What Actually Helps</span><span class="ep-show">May 2026</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size:22px;margin-bottom:10px;">The Point of Medicine</h3>
+        <ul class="interview-list" style="max-width:none;">
+        <li><a href="https://podcasters.spotify.com/pod/show/neural-therapy-pdx/episodes/Episode-20---The-Hidden-Link-Between-Stress--Immunity--Chronic-Illness-w-Gillian-Ehrlich-e3ie717" target="_blank" rel="noopener"><span class="ep-title" style="font-size:17px;">Ep 20 — Stress, Immunity & Chronic Illness w/ Gillian Ehrlich</span><span class="ep-show">Jul 2026</span></a></li>
+        <li><a href="https://podcasters.spotify.com/pod/show/neural-therapy-pdx/episodes/Episode-19---Healing-Trauma-Through-Neural-therapy-with-Lindsay-Howson-e3gpdnd" target="_blank" rel="noopener"><span class="ep-title" style="font-size:17px;">Ep 19 — Healing Trauma Through Neural Therapy with Lindsay Howson</span><span class="ep-show">Jun 2026</span></a></li>
+        <li><a href="https://podcasters.spotify.com/pod/show/neural-therapy-pdx/episodes/Episode-18---Layer-by-Layer-Rethinking-Injection-Therapy-for-Chronic-Pain-with-Dr--Susan-Shultz-e3gebju" target="_blank" rel="noopener"><span class="ep-title" style="font-size:17px;">Ep 18 — Rethinking Injection Therapy for Chronic Pain with Dr. Susan Shultz</span><span class="ep-show">May 2026</span></a></li>
+        <li><a href="https://podcasters.spotify.com/pod/show/neural-therapy-pdx/episodes/Episode-17---Neural-Therapy-Meets-Regenerative-Medicine-Sharon-Krahn--FNP-on-Scars--Pelvic-Work--Mold--Exosomes-e3e5kon" target="_blank" rel="noopener"><span class="ep-title" style="font-size:17px;">Ep 17 — Neural Therapy Meets Regenerative Medicine with Sharon Krahn, FNP</span><span class="ep-show">Apr 2026</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white" id="interviews">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">As a Guest</div>
+      <h2>Expert interviews</h2>
+      <p>Selected appearances on IBD, SIBO, biofilms, parasites, and functional GI testing.</p>
+    </div>
+    <ul class="interview-list">
+      <li><a href="https://www.thesibodoctor.com/2018/01/30/sibo-and-inflammatory-bowel-disease-ibd-with-dr-ilana-gurevich/" target="_blank" rel="noopener"><span class="ep-title">SIBO and Inflammatory Bowel Disease</span><span class="ep-show">The SIBO Doctor Podcast</span></a></li>
+      <li><a href="https://rationalwellness.libsyn.com/inflammatory-bowel-disease-with-dr-ilana-gurevich-rational-wellness-podcast-126" target="_blank" rel="noopener"><span class="ep-title">Inflammatory Bowel Disease</span><span class="ep-show">Rational Wellness #126</span></a></li>
+      <li><a href="https://podcasts.apple.com/us/podcast/parasites-gut-health-dr-ilana-gurevich-rational-wellness/id1191232372?i=1000493041216" target="_blank" rel="noopener"><span class="ep-title">Parasites &amp; Gut Health</span><span class="ep-show">Rational Wellness #176</span></a></li>
+      <li><a href="https://podcasts.apple.com/us/podcast/discussion-on-sibo-and-ibs-with-dr-sam-rahbar-and/id1191232372?i=1000603228147" target="_blank" rel="noopener"><span class="ep-title">SIBO &amp; IBS — with Dr. Sam Rahbar</span><span class="ep-show">Rational Wellness #298</span></a></li>
+      <li><a href="https://thehealthygut.com/podcast/ibd/" target="_blank" rel="noopener"><span class="ep-title">Inflammatory Bowel Disease</span><span class="ep-show">The Healthy Gut Podcast</span></a></li>
+      <li><a href="https://goodnesslover.com/blogs/goodness-lover-live/biofilms-inflammatory-bowel-disease-dr-ilana-gurevich" target="_blank" rel="noopener"><span class="ep-title">Biofilms &amp; Inflammatory Bowel Disease</span><span class="ep-show">Goodness Lover</span></a></li>
+      <li><a href="https://www.biohmhealth.com/blogs/pod-cast/episode-77-how-crohns-and-ulcerative-colitis-are-wildly-different-than-ibs" target="_blank" rel="noopener"><span class="ep-title">How Crohn's &amp; Ulcerative Colitis Differ from IBS</span><span class="ep-show">BIOHM Health #77</span></a></li>
+      <li><a href="https://podcasts.apple.com/au/podcast/love-guts/id1345246309?i=1000609555533" target="_blank" rel="noopener"><span class="ep-title">All Things Biofilms</span><span class="ep-show">Love Guts</span></a></li>
+      <li><a href="https://www.lyndagriparic.com/dr-ilana-gurevich-inflammatory-bowel-disease-ibd/" target="_blank" rel="noopener"><span class="ep-title">Inflammatory Bowel Disease</span><span class="ep-show">Lynda Griparic Podcast</span></a></li>
+      <li><a href="http://www.lyndagriparic.com/dr-ilana-gurevich-exocrine-pancreatic-insufficiency-and-bile-acid-malabsorption-both-un-recognised-causes-of-diarrhoea/" target="_blank" rel="noopener"><span class="ep-title">EPI &amp; Bile Acid Malabsorption — Unrecognized Causes of Diarrhea</span><span class="ep-show">Lynda Griparic Podcast</span></a></li>
+      <li><a href="https://drruscio.com/best-worst-gut-function-tests/" target="_blank" rel="noopener"><span class="ep-title">The Best &amp; Worst Gut Function Tests</span><span class="ep-show">Dr. Ruscio Radio</span></a></li>
+      <li><a href="https://drruscio.com/parasites-and-your-gut/" target="_blank" rel="noopener"><span class="ep-title">Parasites and Your Gut</span><span class="ep-show">Dr. Ruscio Radio</span></a></li>
+      <li><a href="https://drhedberg.com/overcome-inflammatory-bowel-disease/" target="_blank" rel="noopener"><span class="ep-title">How to Overcome Inflammatory Bowel Disease</span><span class="ep-show">Dr. Hedberg Show</span></a></li>
+      <li><a href="https://sibosos.com/connection-between-sibo-ibs-idb-crohns/" target="_blank" rel="noopener"><span class="ep-title">The Connection Between SIBO, IBS, IBD &amp; Crohn's</span><span class="ep-show">SIBO SOS</span></a></li>
+      <li><a href="https://sibosos.com/food-choices-impact-gut-health/" target="_blank" rel="noopener"><span class="ep-title">How Food Choices Impact Gut Health</span><span class="ep-show">SIBO SOS</span></a></li>
+      <li><a href="https://karynhaley.com/dr-ilana-gurevich-naturopath-038-digestive-disease-expert/" target="_blank" rel="noopener"><span class="ep-title">Naturopath &amp; Digestive Disease Expert</span><span class="ep-show">The Cheeky Podcast</span></a></li>
+      <li><a href="https://www.onethingpod.com/episode-92-treating-the-gut-with-dr-ilana-gurevich/" target="_blank" rel="noopener"><span class="ep-title">Treating the Gut</span><span class="ep-show">One Thing with Dr. Adam Rinde #92</span></a></li>
+      <li><a href="https://feedmephoebe.com/post-infectious-ibs-sibo/" target="_blank" rel="noopener"><span class="ep-title">Post-Infectious IBS &amp; SIBO</span><span class="ep-show">Feed Me Phoebe</span></a></li>
+      <li><a href="https://podcasts.apple.com/us/podcast/the-value-of-stool-testing/id983386815?i=1000484626474" target="_blank" rel="noopener"><span class="ep-title">The Value of Stool Testing</span><span class="ep-show">Podcast Interview</span></a></li>
+      <li><a href="https://www.youtube.com/embed/c01L5JFoLJA" target="_blank" rel="noopener"><span class="ep-title">SIBO, Candida &amp; Parasites — New Treatments</span><span class="ep-show">YouTube</span></a></li>
+    </ul>
+    <div class="center mt-3">
+      <p style="color:var(--ink-soft);font-size:15px;">Want Dr. Gurevich on your show or at your conference?</p>
+      <a class="text-link" href="mailto:info@openwellnesspdx.com?subject=Media%20inquiry" style="display:inline-block;margin-top:12px;">Send a media inquiry</a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER — HIDDEN until Flowdesk is connected.
+     To enable: (1) replace the <form> below with the Flowdesk embed/form snippet,
+     (2) delete `hidden` from the <section> tag. Do NOT re-enable the current form
+     as-is: its submit handler shows a fake success message and stores nothing. -->
+<section hidden class="section section-dim" style="padding:72px 0;">
+  <div class="wrap" style="max-width:620px;text-align:center;">
+    <div class="eyebrow">Stay in the Loop</div>
+    <h2 style="font-size:clamp(26px,3.6vw,34px);">Gut wisdom, in your inbox</h2>
+    <p style="color:var(--ink-soft);margin-top:12px;font-size:16px;">New podcast episodes, course announcements, and the occasional deep dive on gut health. No spam, ever.</p>
+    <form class="news-form" style="margin-top:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;" onsubmit="event.preventDefault();this.innerHTML='<p style=&quot;font-family:var(--serif);font-size:20px;color:var(--teal-900);&quot;>Thank you — you\'re on the list!</p>';">
+    <label for="nl-email" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Email address</label>
+      <input id="nl-email" type="email" required placeholder="you@example.com" style="flex:1;min-width:240px;max-width:340px;padding:14px 18px;font-family:var(--sans);font-size:15px;border:1px solid rgba(11,46,60,0.18);border-radius:var(--radius);background:var(--white);">
+      <button class="btn btn-gold" type="submit">Join the List</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo-mark.svg" alt="">
+          <span>doctor ilana</span>
+        </div>
+        <p>Ilana Gurevich, ND, LAc, FABNG<br>Board-certified naturopathic gastroenterologist<br>Portland, Oregon</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="patients.html">For Patients</a></li>
+          <li><a href="providers.html">For Providers</a></li>
+          <li><a href="consulting.html">For Companies</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="press.html">Press Kit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Listen</h4>
+        <ul>
+          <li><a href="https://www.turdnerdspod.com/" target="_blank" rel="noopener">The Turd Nerds</a></li>
+          <li><a href="https://podcasts.apple.com/us/podcast/the-point-of-medicine/id1769930721" target="_blank" rel="noopener">The Point of Medicine</a></li>
+          <li><a href="podcasts.html#interviews">Guest Interviews</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Clinic</h4>
+        <ul>
+          <li><a href="https://www.openwellnesspdx.com/" target="_blank" rel="noopener">Open Wellness PDX</a></li>
+          <li>1901 N Killingsworth St<br>Portland, OR 97217</li>
+          <li><a href="tel:+15037700670">503-770-0670</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-note">
+      <span>© 2026 Dr. Ilana Gurevich. All rights reserved.</span>
+      <span>This website does not provide medical advice. Information is for educational purposes only.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
