@@ -14,6 +14,14 @@ nouns are fine: "naturopathic gastroenterology" (the discipline), FABNG,
 "Gastroenterology Association of Naturopathic Physicians". Calling her MD
 colleagues "your gastroenterologist" is fine — they hold that title.
 
+## ⚠️ Current strategic priority (Aug 11, 2026)
+
+The site's #1 job is **building Ilana's personal brand, audience, and email list.**
+She does NOT need help generating clinic business. Patient/clinic content stays, but
+earlier design decisions that prioritized patient booking over email capture are
+superseded — re-evaluate them rather than preserving them. She has a real lead magnet
+("Rebuild your Microbiome" cookbook) to build the capture flow around.
+
 The owner is non-technical. When she asks for a change, make it, verify the affected
 page still renders sensibly, commit with a plain-English message, and push. Don't
 introduce build tools, frameworks, or dependencies.
@@ -61,14 +69,29 @@ introduce build tools, frameworks, or dependencies.
 
 ## Pending TODOs
 
-- NEWSLETTER: live Flodesk form (form ID 6a7a2a99f57159891f9b371d, segment
-  "doctorilana.com signups") embedded on index.html and podcasts.html. The loader
-  script is in every page's <head>. Fields/colors/button are edited in Flodesk, not
-  here; double opt-in is ON. Only the surrounding headline/subtext live in the HTML.
-- Podcast cover art: the gold/teal tiles on index/podcasts are typographic
-  placeholders — swap for real show artwork when provided.
-- Two claims awaiting Ilana's confirmation: the About pull-quote ("I devoted my
-  practice to digestive disease because I had to…") and "100s of clinicians trained"
-  (providers.html stat strip).
-- Structured data + sitemap assume https://doctorilana.com — keep if that's the
-  live domain.
+- **Newsletter is LIVE** (not a TODO): Flodesk form ID 6a7a2a99f57159891f9b371d,
+  segment "doctorilana.com signups", double opt-in ON. Loader script in every page's
+  <head>; form embedded on index, podcasts, providers, and all 9 condition pages, plus
+  a footer link site-wide. Deliberately NOT on patients/consulting/about/reviews/
+  contact — those pages have a single competing action. Fields/colors/button are edited
+  in Flodesk; only the surrounding headline/subtext live in the HTML.
+- **Contact form still uses a mailto composer** (contact.html) — no backend, and it
+  fails silently for desktop webmail users. Researched replacement: Web3Forms
+  (forward-only, stores nothing, free; access key is public-by-design so it's safe in
+  this public repo). Needs an access key generated from the receiving inbox. Netlify
+  Forms is the alternative — unlimited/free on our plan but stores submissions
+  indefinitely with no BAA, which is why Web3Forms is preferred for a medical practice.
+- Lead magnet: "Rebuild your Microbiome" cookbook PDF sits in ~/Documents/Ilana
+  (8.3MB — compress before hosting). Delivery flow not built yet.
+- Podcast cover art: gold/teal tiles on index/podcasts are typographic placeholders.
+- Awaiting Ilana's confirmation: "Hundreds of clinicians trained" (providers.html stat
+  strip) and the About pull-quote ("I devoted my practice to digestive disease…").
+- Email domain: she wants an address at doctorilana.com. Any DNS work must preserve the
+  Netlify website records, and Flodesk domain authentication needs to share one DMARC
+  record with the email provider.
+- Structured data + sitemap assume https://doctorilana.com.
+
+## Deploy budget
+
+Netlify free credit plan: 300 credits/month, ~15 per production deploy (~20 deploys).
+Forms are free/unmetered. During heavy work sessions, batch changes into fewer pushes.
