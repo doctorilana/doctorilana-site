@@ -67,8 +67,8 @@ introduce build tools, frameworks, or dependencies.
   here; double opt-in is ON. Only the surrounding headline/subtext live in the HTML.
 - Podcast cover art: the gold/teal tiles on index/podcasts are typographic
   placeholders — swap for real show artwork when provided.
-- Two claims awaiting Ilana's confirmation: the About pull-quote ("I became a
-  gastroenterology specialist because I had to…") and "100s of clinicians trained"
+- Two claims awaiting Ilana's confirmation: the About pull-quote ("I devoted my
+  practice to digestive disease because I had to…") and "100s of clinicians trained"
   (providers.html stat strip).
 - Structured data + sitemap assume https://doctorilana.com — keep if that's the
   live domain.
