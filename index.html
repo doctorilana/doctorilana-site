@@ -215,6 +215,27 @@
  ]
 }
 </script>
+<script>
+  (function(w, d, t, h, s, n) {
+    w.FlodeskObject = n;
+    var fn = function() {
+      (w[n].q = w[n].q || []).push(arguments);
+    };
+    w[n] = w[n] || fn;
+    var f = d.getElementsByTagName(t)[0];
+    var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+    var sm = d.createElement(t);
+    sm.async = true;
+    sm.type = 'module';
+    sm.src = h + s + '.mjs' + v;
+    f.parentNode.insertBefore(sm, f);
+    var sn = d.createElement(t);
+    sn.async = true;
+    sn.noModule = true;
+    sn.src = h + s + '.js' + v;
+    f.parentNode.insertBefore(sn, f);
+  })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+</script>
 </head>
 <body>
 
@@ -344,20 +365,21 @@
   </div>
 </section>
 
-<!-- NEWSLETTER — HIDDEN until Flowdesk is connected.
-     To enable: (1) replace the <form> below with the Flowdesk embed/form snippet,
-     (2) delete `hidden` from the <section> tag. Do NOT re-enable the current form
-     as-is: its submit handler shows a fake success message and stores nothing. -->
-<section hidden class="section section-dim" style="padding:72px 0;">
+<!-- NEWSLETTER — Flodesk form, segment "doctorilana.com signups".
+     The form's fields/colors/button are edited in Flodesk, not here.
+     The loader script lives in <head> on every page. -->
+<section class="section section-dim" style="padding:72px 0;">
   <div class="wrap" style="max-width:620px;text-align:center;">
     <div class="eyebrow">Stay in the Loop</div>
     <h2 style="font-size:clamp(26px,3.6vw,34px);">Gut wisdom, in your inbox</h2>
     <p style="color:var(--ink-soft);margin-top:12px;font-size:16px;">New podcast episodes, course announcements, and the occasional deep dive on gut health. No spam, ever.</p>
-    <form class="news-form" style="margin-top:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;" onsubmit="event.preventDefault();this.innerHTML='<p style=&quot;font-family:var(--serif);font-size:20px;color:var(--teal-900);&quot;>Thank you — you\'re on the list!</p>';">
-    <label for="nl-email" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Email address</label>
-      <input id="nl-email" type="email" required placeholder="you@example.com" style="flex:1;min-width:240px;max-width:340px;padding:14px 18px;font-family:var(--sans);font-size:15px;border:1px solid rgba(11,46,60,0.18);border-radius:var(--radius);background:var(--white);">
-      <button class="btn btn-gold" type="submit">Join the List</button>
-    </form>
+    <div id="fd-form-6a7a2a99f57159891f9b371d" style="margin-top:22px;"></div>
+    <script>
+      window.fd('form', {
+        formId: '6a7a2a99f57159891f9b371d',
+        containerEl: '#fd-form-6a7a2a99f57159891f9b371d'
+      });
+    </script>
   </div>
 </section>
 

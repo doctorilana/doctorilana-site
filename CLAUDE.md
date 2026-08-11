@@ -61,10 +61,10 @@ introduce build tools, frameworks, or dependencies.
 
 ## Pending TODOs
 
-- NEWSLETTER: hidden sections on `index.html` and `podcasts.html` (search
-  "NEWSLETTER — HIDDEN"). When Flowdesk is connected, replace the form with the
-  Flowdesk embed snippet and remove the `hidden` attribute. Do NOT re-enable the
-  placeholder form as-is (fake success message, stores nothing).
+- NEWSLETTER: live Flodesk form (form ID 6a7a2a99f57159891f9b371d, segment
+  "doctorilana.com signups") embedded on index.html and podcasts.html. The loader
+  script is in every page's <head>. Fields/colors/button are edited in Flodesk, not
+  here; double opt-in is ON. Only the surrounding headline/subtext live in the HTML.
 - Podcast cover art: the gold/teal tiles on index/podcasts are typographic
   placeholders — swap for real show artwork when provided.
 - Two claims awaiting Ilana's confirmation: the About pull-quote ("I became a
