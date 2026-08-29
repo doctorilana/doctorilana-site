@@ -88,12 +88,11 @@ introduce build tools, frameworks, or dependencies.
   this public repo). Needs an access key generated from the receiving inbox. Netlify
   Forms is the alternative — unlimited/free on our plan but stores submissions
   indefinitely with no BAA, which is why Web3Forms is preferred for a medical practice.
-- **Flodesk cookbook workflow built, awaiting Publish** (Aug 29, 2026): workflow
-  "Cookbook delivery — doctorilana.com signups" exists in Flodesk with the trigger
-  (segment "doctorilana.com signups") and delivery email (button →
-  https://doctorilana.com/cookbook.html) fully configured — Danny just needs to hit
-  Publish, choosing "include existing subscribers" if offered. The signup form's
-  button was already renamed live to "Send me the cookbook".
+- ~~Flodesk cookbook delivery~~ DONE (Aug 29, 2026): workflow "Cookbook delivery —
+  doctorilana.com signups" is published in Flodesk (trigger: segment
+  "doctorilana.com signups"; email button → https://doctorilana.com/cookbook.html),
+  and the signup form's button reads "Send me the cookbook". The capture loop is
+  fully live end-to-end.
 - Podcast cover art: gold/teal tiles on index/podcasts are typographic placeholders.
 - Awaiting Ilana's confirmation: "Hundreds of clinicians trained" (providers.html stat
   strip) and the About pull-quote ("I devoted my practice to digestive disease…").
