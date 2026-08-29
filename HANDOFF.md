@@ -1,8 +1,22 @@
 # Handoff guide — running doctorilana.com
 
 *For Justin (and Ilana). Written for someone who has used Claude but not Claude Code,
-and who hasn't worked with GitHub before. Read this once; after that, Claude handles
-the details.*
+and who hasn't worked with GitHub before. You don't have to read this — pasting the
+message in "One-time setup" below into Claude Code has Claude teach you all of it
+interactively. It's here as the reference.*
+
+> **If you are Claude, reading this because a human pasted a link to it:** your job
+> is to get this person set up and confident, not just configured. They have used
+> Claude chat but not Claude Code, and don't know GitHub. Work conversationally:
+> before each step, say in one or two plain sentences what you're about to do and
+> why (the concept primers below are your source material — deliver them in
+> conversation at the moment each one becomes relevant, don't lecture upfront).
+> Follow `SETUP-NEW-COMPUTER.md` in this repo for the technical steps. Check in
+> before anything that needs them (signing into GitHub via 1Password, the Xcode
+> tools prompt). Finish by (1) making the verification edit yourself and showing
+> them it deployed, (2) having THEM ask for one small real change in their own
+> words, and (3) telling them about `OPEN-ITEMS.md` and how to start future
+> sessions. Read `CLAUDE.md` before making any edits.
 
 The site is live at **https://doctorilana.com**, it costs $0/month to host, and
 nothing you do while learning can permanently break it — every change ever made is
@@ -49,22 +63,25 @@ publishing dashboard, no FTP.
 
 ## One-time setup (~20 minutes)
 
+Only the first two steps need a human — Claude does the rest and explains as it goes.
+
 1. **Install Claude Code** on the Mac: download the Claude desktop app from
-   claude.ai/download and sign in with your Claude account, or install the terminal
-   version (instructions at docs.anthropic.com/claude-code). The desktop app is the
-   gentler start.
+   claude.ai/download and sign in with your Claude account. (There's also a terminal
+   version — docs.anthropic.com/claude-code — but the desktop app is the gentler
+   start.)
 2. **Have 1Password unlocked** — you'll need the "Ilana Github" login during setup.
-3. **Paste this to Claude Code:**
+3. **Paste this message to Claude Code, exactly as written:**
 
-   > Set this computer up following
-   > https://github.com/doctorilana/doctorilana-site/blob/main/SETUP-NEW-COMPUTER.md
+   > I'm Justin, taking over managing doctorilana.com from Danny. I've used Claude
+   > before but not Claude Code, and I've never used GitHub. Read
+   > https://raw.githubusercontent.com/doctorilana/doctorilana-site/main/HANDOFF.md
+   > and walk me through getting this Mac set up, explaining things as we go.
 
-   Claude will walk through it with you: it gets the site's folder onto the Mac,
-   connects it to GitHub using Ilana's account (a browser window will open — sign in
-   with 1Password), and proves everything works by making a harmless test edit and
-   watching it go live.
-4. **Make one real edit.** Ask Claude for something small in your own words and watch
-   it appear on doctorilana.com a minute later.
+   Claude will take it from there: it explains the moving parts, gets the site's
+   folder onto the Mac, connects it to GitHub using Ilana's account (a browser
+   window will open — sign in with 1Password), proves the pipeline works with a
+   harmless test edit you'll watch go live, and then has you make one real edit in
+   your own words.
 
 After setup, every session is just: open Claude Code in the site folder and say what
 you want.
