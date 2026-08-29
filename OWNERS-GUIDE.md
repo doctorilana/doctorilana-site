@@ -1,6 +1,8 @@
 # Your Website — Owner's Guide
 
-*For Ilana (and anyone helping her). No technical knowledge assumed.*
+*For Ilana (and anyone helping her). No technical knowledge assumed.
+Justin: start with `HANDOFF.md` — it has the setup steps and explains the moving
+parts. This guide is the day-to-day reference.*
 
 ## What you have
 
@@ -16,6 +18,12 @@ Your website — **doctorilana.com** — is a set of simple files that live in t
 All logins are in the shared 1Password vault. Hosting costs: **$0/month**. The only
 bill is the annual domain renewal at GoDaddy.
 
+The site's #1 job (your call, August 2026): **growing your audience and email list**
+around the free "Rebuild Your Microbiome" cookbook. Everything about that loop is
+live — signup forms and a timed popup on the site, and Flodesk automatically emails
+new subscribers the cookbook. Patient and clinic content stays, but list growth is
+the point.
+
 ## How you edit your site
 
 Open Claude Code on the laptop, in the website folder, and say what you want in plain
@@ -26,20 +34,24 @@ English. Examples that work verbatim:
 - "Add a testimonial from a patient — here's the quote…"
 - "Reword the second paragraph on the About page to mention my new certification."
 - "Undo whatever we changed yesterday."
+- "What's on the open items list?"
 
 Claude edits the files, saves the change to GitHub with a note describing it, and the
 live site updates in about a minute. **Every change is reversible** — the filing
 cabinet keeps every version ever, so nothing you ask for can permanently break the
 site.
 
-## Three rules
+## Four rules
 
 1. **One voice rule:** never describe yourself as a "gastroenterologist" on the site —
    Claude knows this rule and will phrase around it ("naturopathic physician
    specializing in gastrointestinal disorders").
-2. **No secrets in the site files.** Passwords and API keys never go in this folder.
-   Claude knows this too.
-3. **When in doubt, just ask Claude** — including "explain what you just did" or
+2. **No secrets in the site files.** Passwords and API keys never go in this folder —
+   the folder is publicly visible by design. Claude knows this too.
+3. **Flodesk's account-wide branding belongs to the clinic.** Your one Flodesk
+   account serves both Open Wellness and doctorilana.com; don't change global
+   settings there. Claude knows the workaround for your newsletters.
+4. **When in doubt, just ask Claude** — including "explain what you just did" or
    "show me before you publish."
 
 ## When something seems wrong
@@ -49,39 +61,23 @@ site.
 - **Site is down?** It almost never will be (Netlify is very reliable). Check
   netlify.com status, or ask Claude to investigate.
 - **Locked out of something?** All credentials are in 1Password: GitHub, Netlify,
-  GoDaddy.
+  GoDaddy, Flodesk.
 - **Human help:** Danny set this up and can always be called.
 
-## When you land: your first session (in order)
+## What's still to do
 
-**The site is already live at doctorilana.com** — nothing below is urgent, and nothing
-can break.
+The full list lives in `OPEN-ITEMS.md` (ask Claude: "what's on the open items
+list?"). The highlights, in rough priority order:
 
-1. **Set up the laptop** (~15 min, with your husband). Install Claude Desktop if
-   needed, open Claude Code, and paste this sentence:
-   *"Set this computer up following
-   https://github.com/doctorilana/doctorilana-site/blob/main/SETUP-NEW-COMPUTER.md"*
-   Claude does the rest and proves it works with a test edit.
-2. **Make one edit yourself.** Ask Claude to change something small in your own words.
-   Watch it appear on doctorilana.com a minute later. Now it's your website.
-3. **Google Search Console** (~3 min, any device): search-console.google.com → Add
-   property → "Domain" → doctorilana.com. Google shows a TXT record — send it to
-   Danny, he adds it at GoDaddy, you click Verify. Then submit the sitemap:
-   https://doctorilana.com/sitemap.xml. This makes Google index the new site fast.
-4. **Google Business Profile**: set your website field to https://doctorilana.com.
-5. **Update your links elsewhere** (big for Google, easy for you): point your Open
-   Wellness PDX provider page, LinkedIn, Turd Nerds bio, SIBO Doctor course bio, and
-   Teachable school at doctorilana.com. Mention the new site in future podcast
-   appearances.
-6. **Your old Wix site ("thegutdoc")**: it still exists in your Wix account, with blog
-   posts and Online Classes content. Export or copy anything you want to keep —
-   **before** canceling any Wix subscription. Claude can help fold that content into
-   the new site.
-
-## Answers Claude is waiting on (tell any Claude session, it'll handle the rest)
-
-- Which states you're licensed to see telehealth patients from (for an FAQ section).
-- Whether "hundreds of clinicians trained" (Providers page) is accurate to your liking.
-- The Flowdesk embed snippet, when marketing emails are ready — the newsletter signup
-  is built and hidden, waiting for it.
-- Real podcast cover art files, to replace the placeholder tiles.
+1. **Email at doctorilana.com** — Google Workspace, so newsletters come from
+   ilana@doctorilana.com instead of the clinic address. Decided; needs your card to
+   finish. The DNS steps have traps — coordinate with Danny.
+2. **Your old Wix site ("thegutdoc")** — export the blog posts and Online Classes
+   content you want to keep **before** canceling any Wix subscription.
+3. **Google Search Console + Business Profile + your bios** — quick one-time steps
+   that make Google find the new site: submit the sitemap, set your Business Profile
+   website, and point your Open Wellness page, LinkedIn, Turd Nerds bio, SIBO
+   Doctor, and Teachable links at doctorilana.com.
+4. **Real podcast cover art** — the current tiles are placeholders.
+5. **Copy you haven't signed off on** — "Hundreds of clinicians trained"
+   (Providers page) and the About pull-quote.

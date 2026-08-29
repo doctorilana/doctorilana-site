@@ -29,14 +29,60 @@ link reads "Free Cookbook". Delivery: `downloads/rebuild-your-microbiome-cookboo
 `_headers` and the page's robots meta, and deliberately absent from `sitemap.xml` —
 the Flodesk welcome email is the intended way in. Don't add them to the sitemap.
 
-The owner is non-technical. When she asks for a change, make it, verify the affected
-page still renders sensibly, commit with a plain-English message, and push. Don't
-introduce build tools, frameworks, or dependencies.
+The owners are non-technical: the site is managed by Ilana and her husband Justin
+(as of the Aug 2026 handoff from Danny, who built it). When they ask for a change,
+make it, verify the affected page still renders sensibly, commit with a
+plain-English message, and push. Don't introduce build tools, frameworks, or
+dependencies. Explain what you did in plain English — assume no knowledge of git,
+GitHub, or web tooling.
 
 ## Companion docs
 
+- `HANDOFF.md` — orientation for Justin/Ilana: what the pieces are, how to work
 - `OWNERS-GUIDE.md` — human-facing guide for Ilana (plain English)
+- `OPEN-ITEMS.md` — the live to-do list; keep it updated as items finish
 - `SETUP-NEW-COMPUTER.md` — runbook for Claude to set up a new editing machine
+
+## Accounts and access
+
+- GitHub repo owner: the `doctorilana` account (Ilana's; login in the shared
+  1Password vault, item "Ilana Github"). Justin edits using this account.
+  `robotdanny` (Danny) remains a collaborator as the break-glass option.
+- The repo must stay **public** — Netlify's free tier blocks collaborator pushes on
+  private repos. Never suggest making it private.
+- Netlify, GoDaddy, and Flodesk logins are all in the shared 1Password vault.
+  Claude never needs these credentials and secrets never go in this repo.
+
+## Flodesk (email list) — shared-account rules
+
+Ilana has ONE Flodesk account (legacy $38/mo unlimited plan, renews Mar 2027 —
+**never cancel or downgrade it**, that pricing is discontinued) serving TWO brands:
+Open Wellness PDX (the clinic, ~14k patient list, the account's primary tenant) and
+doctorilana.com.
+
+- **Global branding belongs to the CLINIC** (logo, colors, footer address,
+  double-opt-in email). Changing global settings retroactively rewrites existing
+  clinic emails/forms — don't.
+- doctorilana emails override per-email: delete the logo block, insert an image
+  block with the doctor-ilana logo, duplicate a past doctorilana email as the
+  template for new sends.
+- Website signups → segment "doctorilana.com signups" (form ID
+  6a7a2a99f57159891f9b371d, double opt-in ON). Keep this segment separate from the
+  clinic's patient-derived segments.
+- Cookbook delivery workflow "Cookbook delivery — doctorilana.com signups" is
+  published and handles fulfillment automatically.
+- Popup form "Cookbook popup — doctorilana.com" shows after 30s. Gotcha: Flodesk's
+  universal header script alone does NOT display popups on a hand-coded site — every
+  page needs a `window.fd('form', {formId})` call (present site-wide except
+  cookbook.html). Keep that call when creating new pages.
+
+## Email at doctorilana.com
+
+Google Workspace (ilana@doctorilana.com + hello@ alias) was decided Aug 2026 and may
+or may not be fully set up — see `OPEN-ITEMS.md` for the full decision record and
+the DNS/DMARC gotchas. Any DNS change at GoDaddy must preserve the website records
+(A @ = 75.2.60.5, CNAME www = doctorilana.netlify.app), and the domain can hold only
+ONE DMARC record shared between Google and Flodesk.
 
 ## Structure
 
@@ -82,23 +128,10 @@ introduce build tools, frameworks, or dependencies.
   a footer link site-wide. Deliberately NOT on patients/consulting/about/reviews/
   contact — those pages have a single competing action. Fields/colors/button are edited
   in Flodesk; only the surrounding headline/subtext live in the HTML.
-- **Contact form still uses a mailto composer** (contact.html) — no backend, and it
-  fails silently for desktop webmail users. Researched replacement: Web3Forms
-  (forward-only, stores nothing, free; access key is public-by-design so it's safe in
-  this public repo). Needs an access key generated from the receiving inbox. Netlify
-  Forms is the alternative — unlimited/free on our plan but stores submissions
-  indefinitely with no BAA, which is why Web3Forms is preferred for a medical practice.
-- ~~Flodesk cookbook delivery~~ DONE (Aug 29, 2026): workflow "Cookbook delivery —
-  doctorilana.com signups" is published in Flodesk (trigger: segment
-  "doctorilana.com signups"; email button → https://doctorilana.com/cookbook.html),
-  and the signup form's button reads "Send me the cookbook". The capture loop is
-  fully live end-to-end.
-- Podcast cover art: gold/teal tiles on index/podcasts are typographic placeholders.
-- Awaiting Ilana's confirmation: "Hundreds of clinicians trained" (providers.html stat
-  strip) and the About pull-quote ("I devoted my practice to digestive disease…").
-- Email domain: she wants an address at doctorilana.com. Any DNS work must preserve the
-  Netlify website records, and Flodesk domain authentication needs to share one DMARC
-  record with the email provider.
+- **Contact form still uses a mailto composer** (contact.html) — planned replacement
+  is Web3Forms; details and sequencing in `OPEN-ITEMS.md`.
+- Everything else lives in `OPEN-ITEMS.md` — read it when asked "what's next" and
+  keep it current as items complete.
 - Structured data + sitemap assume https://doctorilana.com.
 
 ## Deploy budget

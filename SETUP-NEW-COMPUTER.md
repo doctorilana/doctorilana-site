@@ -14,21 +14,26 @@ entire pipeline — there is no build step, no staging, no other moving parts.
 1. **Check git exists**: `git --version`. On a fresh Mac this triggers the Xcode
    Command Line Tools install prompt — let the human click through it (~5 min).
 
-2. **GitHub access.** Preferred: the human has their own GitHub account, added as a
-   collaborator on `doctorilana/doctorilana-site` (repo Settings → Collaborators,
-   done by the `doctorilana` account — credentials in the family 1Password).
-   Then authenticate this machine, whichever is easiest:
-   - `gh auth login` (install GitHub CLI via Homebrew if present; web-browser flow), or
+2. **GitHub access.** The site is edited under Ilana's own GitHub account,
+   `doctorilana` (login + passkey in the shared 1Password vault, item "Ilana
+   Github"). Authenticate this machine, whichever is easiest:
+   - `gh auth login` (install GitHub CLI via Homebrew if present; choose the
+     web-browser flow — the human signs in with 1Password when the browser opens), or
    - SSH key: `ssh-keygen -t ed25519`, add the public key at github.com → Settings →
-     SSH keys, clone via SSH remote.
+     SSH keys (while signed in as doctorilana), clone via SSH remote.
    The repo is public, so cloning works without auth — only pushing needs it.
+   (Alternative, if the human ever wants their own GitHub account instead: create
+   one, then add it as a collaborator via repo Settings → Collaborators from the
+   `doctorilana` account.)
 
 3. **Clone** into Documents:
    `git clone https://github.com/doctorilana/doctorilana-site.git ~/Documents/doctorilana-site`
    (or SSH URL if using keys).
 
 4. **Set git identity** (repo-local is fine):
-   `git config user.name "<human's name>"` and `git config user.email "<their email>"`.
+   `git config user.name "<human's name>"` and
+   `git config user.email "ilana.gurevich@gmail.com"` (the email on the doctorilana
+   GitHub account — using it keeps the edit history attributed to the account).
 
 5. **Read `CLAUDE.md`** in the repo root — it has the site structure, editing
    conventions, and a non-negotiable title-compliance rule.
