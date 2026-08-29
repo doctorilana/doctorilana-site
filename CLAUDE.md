@@ -14,13 +14,20 @@ nouns are fine: "naturopathic gastroenterology" (the discipline), FABNG,
 "Gastroenterology Association of Naturopathic Physicians". Calling her MD
 colleagues "your gastroenterologist" is fine — they hold that title.
 
-## ⚠️ Current strategic priority (Aug 11, 2026)
+## ⚠️ Current strategic priority (confirmed by Ilana, Aug 29, 2026)
 
 The site's #1 job is **building Ilana's personal brand, audience, and email list.**
 She does NOT need help generating clinic business. Patient/clinic content stays, but
 earlier design decisions that prioritized patient booking over email capture are
-superseded — re-evaluate them rather than preserving them. She has a real lead magnet
-("Rebuild your Microbiome" cookbook) to build the capture flow around.
+superseded — re-evaluate them rather than preserving them.
+
+The capture flow is built around the lead magnet (Aug 29, 2026): every signup
+section offers the free "Rebuild Your Microbiome" cookbook, the homepage hero's
+primary CTA is "Get the Free Cookbook" (#newsletter), and the site-wide footer
+link reads "Free Cookbook". Delivery: `downloads/rebuild-your-microbiome-cookbook.pdf`
+(compressed to 2.6MB) is linked from `cookbook.html`; both are noindexed via
+`_headers` and the page's robots meta, and deliberately absent from `sitemap.xml` —
+the Flodesk welcome email is the intended way in. Don't add them to the sitemap.
 
 The owner is non-technical. When she asks for a change, make it, verify the affected
 page still renders sensibly, commit with a plain-English message, and push. Don't
@@ -81,8 +88,13 @@ introduce build tools, frameworks, or dependencies.
   this public repo). Needs an access key generated from the receiving inbox. Netlify
   Forms is the alternative — unlimited/free on our plan but stores submissions
   indefinitely with no BAA, which is why Web3Forms is preferred for a medical practice.
-- Lead magnet: "Rebuild your Microbiome" cookbook PDF sits in ~/Documents/Ilana
-  (8.3MB — compress before hosting). Delivery flow not built yet.
+- **Flodesk welcome email not yet created** — the site now promises the cookbook at
+  signup, but Flodesk must actually send the link. Needed (in the Flodesk UI): a
+  workflow on segment "doctorilana.com signups" whose first email links to
+  https://doctorilana.com/cookbook.html, with "include existing subscribers" enabled
+  so anyone who signed up before the workflow existed still gets it. Also worth
+  changing the form's button text in Flodesk from "Join the List" to
+  "Send Me the Cookbook".
 - Podcast cover art: gold/teal tiles on index/podcasts are typographic placeholders.
 - Awaiting Ilana's confirmation: "Hundreds of clinicians trained" (providers.html stat
   strip) and the About pull-quote ("I devoted my practice to digestive disease…").

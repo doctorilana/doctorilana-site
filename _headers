@@ -1,0 +1,7 @@
+# Keep the lead-magnet download and its delivery page out of search results.
+# The email signup is the only intended way in.
+/downloads/*
+  X-Robots-Tag: noindex
+
+/cookbook.html
+  X-Robots-Tag: noindex
