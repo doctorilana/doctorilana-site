@@ -11,12 +11,16 @@ interactively. It's here as the reference.*
 > before each step, say in one or two plain sentences what you're about to do and
 > why (the concept primers below are your source material — deliver them in
 > conversation at the moment each one becomes relevant, don't lecture upfront).
-> Follow `SETUP-NEW-COMPUTER.md` in this repo for the technical steps. Check in
-> before anything that needs them (signing into GitHub via 1Password, the Xcode
-> tools prompt). Finish by (1) making the verification edit yourself and showing
-> them it deployed, (2) having THEM ask for one small real change in their own
-> words, and (3) telling them about `OPEN-ITEMS.md` and how to start future
-> sessions. Read `CLAUDE.md` before making any edits.
+> Start by giving a short end-to-end overview of how the site works (the "How a
+> change actually happens" pipeline below), and invite questions — answering "how
+> does this all fit together?" is as much the job as the setup itself. Follow
+> `SETUP-NEW-COMPUTER.md` in this repo for the technical steps. Check in before
+> anything that needs them (signing into GitHub — they do that themselves in the
+> browser with 1Password; the Apple command-line tools prompt). Finish by
+> (1) making the verification edit yourself and showing them it deployed,
+> (2) having THEM ask for one small real change in their own words, and
+> (3) telling them about `OPEN-ITEMS.md` and how to start future sessions.
+> Read `CLAUDE.md` before making any edits.
 
 The site is live at **https://doctorilana.com**, it costs $0/month to host, and
 nothing you do while learning can permanently break it — every change ever made is
@@ -61,33 +65,69 @@ Claude saves the change to GitHub with a plain-English note (this is called a
 the live site ~1 minute later. That's the whole pipeline. No build tools, no
 publishing dashboard, no FTP.
 
+```mermaid
+flowchart LR
+    A["You<br/>(plain English)"] --> B["Claude Code<br/>edits the files"]
+    B --> C["Folder on the Mac<br/>doctorilana-site"]
+    C -->|"saved with a note<br/>(~seconds)"| D["GitHub<br/>master copy + full history"]
+    D -->|"automatic<br/>(~1 minute)"| E["Netlify<br/>publishes"]
+    E --> F["doctorilana.com<br/>live site"]
+    F -.->|"signup forms feed"| G["Flodesk<br/>email list + cookbook delivery"]
+```
+
+(If you're reading this on github.com, that renders as a diagram.)
+
 ## One-time setup (~20 minutes)
 
 Only the first two steps need a human — Claude does the rest and explains as it goes.
 
-1. **Install Claude Code** on the Mac: download the Claude desktop app from
-   claude.ai/download and sign in with your Claude account. (There's also a terminal
-   version — docs.anthropic.com/claude-code — but the desktop app is the gentler
-   start.)
-2. **Have 1Password unlocked** — you'll need the "Ilana Github" login during setup.
-3. **Paste this message to Claude Code, exactly as written:**
+1. **Switch to Claude Code** in the Claude desktop app you already have: it's the
+   **Code** tab in the app (next to the regular chat). Same account, nothing to
+   install. If you don't see it, update the app (claude.ai/download).
+
+2. **Choose a folder — pick Documents.** Here's the one concept that's new coming
+   from chat: Claude Code always works inside a folder on your Mac — that folder is
+   its workspace, and it can only see and edit files in there. When you start a
+   session it asks which folder to use. The first time, just pick your **Documents**
+   folder. You don't need to create anything — during setup Claude will download the
+   website from GitHub, which creates the site's own folder inside Documents, named
+   **`doctorilana-site`**. Every session after this one, you'll open Claude Code in
+   *that* folder instead (Documents → doctorilana-site).
+
+3. **Paste this message, exactly as written:**
 
    > I'm Justin, taking over managing doctorilana.com from Danny. I've used Claude
    > before but not Claude Code, and I've never used GitHub. Read
    > https://raw.githubusercontent.com/doctorilana/doctorilana-site/main/HANDOFF.md
    > and walk me through getting this Mac set up, explaining things as we go.
 
-   Claude will take it from there: it explains the moving parts, gets the site's
-   folder onto the Mac, connects it to GitHub using Ilana's account (a browser
-   window will open — sign in with 1Password), proves the pipeline works with a
-   harmless test edit you'll watch go live, and then has you make one real edit in
-   your own words.
+   Claude takes it from there: it explains the moving parts, downloads the site's
+   folder, connects the Mac to GitHub, proves the pipeline works with a harmless
+   test edit you'll watch go live, and then has you make one real edit in your own
+   words. Ask questions at any point — that's part of the session.
 
-After setup, every session is just: open Claude Code in the site folder and say what
-you want.
+**Three moments during setup to expect:**
+
+- **Permission prompts.** Claude Code asks before each new kind of action it takes
+  on your Mac — nothing downloads or runs without you approving it. Early on you'll
+  approve a handful of these; that's normal, not a warning sign.
+- **A GitHub sign-in window.** When Claude connects the Mac to GitHub, a browser
+  window opens at github.com. *You* sign in there — use the "Ilana Github" item in
+  the shared 1Password vault (it autofills, or copy from the 1Password app). Claude
+  never sees or handles the password; that's deliberate.
+- **Possibly one Apple download.** If this Mac has never had Apple's command-line
+  tools, macOS pops up its own installer (needed for the tool that talks to GitHub).
+  It's a few hundred MB and takes a few minutes — click Install and wait. This is
+  the only sizable download; the website itself is small.
+
+After setup, every session is just: open Claude Code in Documents → doctorilana-site
+and say what you want.
 
 ## Things to say to Claude (verbatim examples that work)
 
+- "How does my website actually work, end to end?"
+- "What's the difference between GitHub and Netlify again?"
+- "What happens, step by step, when I ask you to change something?"
 - "Add this episode to the podcasts page: [paste title + link]"
 - "Add a testimonial — here's the quote…"
 - "Reword the second paragraph on the About page to mention Ilana's new certification."
