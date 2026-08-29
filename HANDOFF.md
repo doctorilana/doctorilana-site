@@ -85,14 +85,16 @@ Only the first two steps need a human — Claude does the rest and explains as i
    **Code** tab in the app (next to the regular chat). Same account, nothing to
    install. If you don't see it, update the app (claude.ai/download).
 
-2. **Choose a folder — pick Documents.** Here's the one concept that's new coming
-   from chat: Claude Code always works inside a folder on your Mac — that folder is
-   its workspace, and it can only see and edit files in there. When you start a
-   session it asks which folder to use. The first time, just pick your **Documents**
-   folder. You don't need to create anything — during setup Claude will download the
-   website from GitHub, which creates the site's own folder inside Documents, named
-   **`doctorilana-site`**. Every session after this one, you'll open Claude Code in
-   *that* folder instead (Documents → doctorilana-site).
+2. **Make a home for the website, and choose it.** Here's the one concept that's
+   new coming from chat: Claude Code always works inside a folder on your Mac — that
+   folder is its workspace, and it's what Claude can see and edit. So first, in
+   Finder, create a new folder in Documents called **Ilana Website**. When Claude
+   Code asks which folder to work in, pick that one. During setup Claude downloads
+   the website from GitHub, which creates the site's own folder inside it, named
+   **`doctorilana-site`** — and the brand files Danny sends (logos, headshots, the
+   original cookbook) live in Ilana Website too, next to the site folder, never
+   inside it. Every session after this one, open Claude Code in
+   Documents → Ilana Website → **doctorilana-site**.
 
 3. **Paste this message, exactly as written:**
 
@@ -110,7 +112,11 @@ Only the first two steps need a human — Claude does the rest and explains as i
 
 - **Permission prompts.** Claude Code asks before each new kind of action it takes
   on your Mac — nothing downloads or runs without you approving it. Early on you'll
-  approve a handful of these; that's normal, not a warning sign.
+  approve a handful of these; that's normal, not a warning sign. For routine ones
+  you can answer "always allow" and it's remembered — within a few sessions the
+  repetitive prompts stop while anything new still checks with you. Leave the
+  approval settings and the model picker on their defaults; neither is a dial you
+  need to touch.
 - **A GitHub sign-in window.** When Claude connects the Mac to GitHub, a browser
   window opens at github.com. *You* sign in there — use the "Ilana Github" item in
   the shared 1Password vault (it autofills, or copy from the 1Password app). Claude
@@ -120,8 +126,8 @@ Only the first two steps need a human — Claude does the rest and explains as i
   It's a few hundred MB and takes a few minutes — click Install and wait. This is
   the only sizable download; the website itself is small.
 
-After setup, every session is just: open Claude Code in Documents → doctorilana-site
-and say what you want.
+After setup, every session is just: open Claude Code in
+Documents → Ilana Website → doctorilana-site and say what you want.
 
 ## Things to say to Claude (verbatim examples that work)
 
@@ -165,7 +171,7 @@ and say what you want.
   it, but it's why Claude "already knows" things.
 - `SETUP-NEW-COMPUTER.md` — the setup runbook from step 3 above.
 
-## Files Danny is sending separately (keep them somewhere safe, NOT in the site folder)
+## Files Danny is sending separately (keep them in Ilana Website, next to — NOT inside — the site folder)
 
 - `Rebuild your microbiome cookbook.pdf` — the original full-quality cookbook
   (the site serves a compressed copy).

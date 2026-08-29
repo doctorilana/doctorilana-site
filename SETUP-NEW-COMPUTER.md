@@ -26,9 +26,12 @@ entire pipeline — there is no build step, no staging, no other moving parts.
    one, then add it as a collaborator via repo Settings → Collaborators from the
    `doctorilana` account.)
 
-3. **Clone** into Documents:
-   `git clone https://github.com/doctorilana/doctorilana-site.git ~/Documents/doctorilana-site`
-   (or SSH URL if using keys).
+3. **Clone** into the session's working folder (per `HANDOFF.md`, that's expected
+   to be `~/Documents/Ilana Website` — a dedicated parent folder that also holds
+   brand assets, so the repo lands next to them):
+   `git clone https://github.com/doctorilana/doctorilana-site.git`
+   (or SSH URL if using keys). If the session was opened somewhere unexpected (e.g.
+   all of Documents), suggest creating `Ilana Website` and cloning there instead.
 
 4. **Set git identity** (repo-local is fine):
    `git config user.name "<human's name>"` and
